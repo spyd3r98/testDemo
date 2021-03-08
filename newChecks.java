@@ -5,6 +5,7 @@ class Car implements Externalizable {
     int year;
  
     Car(String n, int y)
+        
     {
         this.name = n;
         this.year = y;
