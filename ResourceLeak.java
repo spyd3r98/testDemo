@@ -4,9 +4,18 @@ import org.springframework.boot.SpringApplication;
 public class ResourceLeak {
 private int x ,y ,z,apiCount;
 		
-	 public static void main(String args[]) {  
+	 public static void main(String args[]) throws Exception {  
 	     SpringApplication.run(SpringBootApplicationAndComponentScanNotBeUsedInDefaultPackage.class, args);
-	     System.out.println("Hello");  
+	     System.out.println("Hello"); 
+	     StringBuffer sb = new StringBuffer("Hi ");
+             sb.append("i");
+   	     System.out.println(sb);
+		 
+		 
+	private int c = 0;
+    	public synchronized void increment() {
+        c++;
+    }
 	    } 
  
 	private boolean active;
