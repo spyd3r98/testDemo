@@ -10,6 +10,7 @@ private int x ,y ,z,apiCount;
 	     StringBuffer sb = new StringBuffer("Hi ");
              sb.append("i");
    	     System.out.println(sb);
+	     String s = "" + 123;
 		 
 		 
 	private int c = 0;
