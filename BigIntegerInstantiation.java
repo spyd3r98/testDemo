@@ -3,7 +3,7 @@ import java.math.BigInteger;
 import javax.net.ssl.SSLContext;
 import java.io.*;  
 import java.net.*;  
-
+import org.apache.http.conn.ssl.SSLSocketFactory;
 class BigIntegerInstantiation{
 	public static void main(String args[]){  
 		// EMB-ISSUE: CodeIssueNames.BIG_INTEGER_INSTANTIATION
