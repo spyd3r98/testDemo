@@ -1,4 +1,8 @@
 import org.springframework.boot.SpringApplication;
+import javax.net.ssl.SSLContext;
+import java.io.*;  
+import java.net.*; 
+import org.apache.http.conn.ssl.SSLSocketFactory;
 @ComponentScan(exclude=Book.class,scanBasePackages={"net.javabeat"})
 @SpringBootApplication
 public class ResourceLeak {
