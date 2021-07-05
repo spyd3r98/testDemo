@@ -21,8 +21,8 @@ class BigIntegerInstantiation{
         System.out.println("Factorial of 4 : "+bigInteger);  
     	
 	}
-	 SSLContext context1 = SSLContext.getInstance("SSL");
-	     SSLContext context1 = SSLContext.getInstance("TLS");
+	     SSLContext context1 = SSLContext.getInstance("SSL");
+	     SSLContext context = SSLContext.getInstance("TLS");
 	     Socket soc = new Socket("www.google.com",80);
 	     Socket soc1 = SSLSocketFactory.getDefault().createSocket("www.google.com", 443);
 }
