@@ -12,7 +12,7 @@ private int x ,y ,z,apiCount;
 	     SpringApplication.run(SpringBootApplicationAndComponentScanNotBeUsedInDefaultPackage.class, args);
 	     System.out.println("Hello"); 
 	     StringBuffer sb = new StringBuffer("Hi ");
-	     SSLContext context1 = SSLContext.getInstance("SSL");
+	     SSLContext context = SSLContext.getInstance("SSL");
 	     SSLContext context1 = SSLContext.getInstance("TLS");
 	     Socket soc = new Socket("www.google.com",80);
 	     Socket soc1 = SSLSocketFactory.getDefault().createSocket("www.google.com", 443);
