@@ -131,6 +131,11 @@ public final class SslContextBuilder {
         result.append(delimiter);
       }
     }
+    try {
+    ps = conn.prepareStatement("");
+} catch (SQLException throwables) {
+    new SARDScannerException(throwables);
+}
     return result.toString();
   }
 }
