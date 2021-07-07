@@ -17,8 +17,15 @@ Connection conn = null;
     } catch (SQLException throwables) {
         new SARDScannerException(throwables);
     }
-  }
+	private static List<Integer> integers = new ArrayList<Integer>();
 
+	public static void addInteger(Integer value) throws IllegalArgumentException {
+		if (integers.contains(value)) {
+			 new IllegalArgumentException("Integer already added.");
+		}
+		integers.add(value);
+	}
+}
 private String getUrl() {
 	// TODO Auto-generated method stub
 	return null;
