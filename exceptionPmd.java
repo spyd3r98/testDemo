@@ -1,15 +1,18 @@
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
 import com.sun.jdi.connect.spi.Connection;
 
 public class exceptionPmd{
-
-Connection conn = null;
+	private static List<Integer> integers = new ArrayList<Integer>();
+	static Connection conn= null;
+	public static void main(String args[]) {
 	try {
 		conn = (Connection) DriverManager.getConnection(getUrl());
 	} catch (SQLException e) {
-		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
     try {
@@ -17,7 +20,7 @@ Connection conn = null;
     } catch (SQLException throwables) {
         new SARDScannerException(throwables);
     }
-	private static List<Integer> integers = new ArrayList<Integer>();
+}
 
 	public static void addInteger(Integer value) throws IllegalArgumentException {
 		if (integers.contains(value)) {
@@ -25,8 +28,7 @@ Connection conn = null;
 		}
 		integers.add(value);
 	}
-}
-private String getUrl() {
+private static String getUrl() {
 	// TODO Auto-generated method stub
 	return null;
 }

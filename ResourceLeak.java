@@ -1,15 +1,17 @@
-import org.springframework.boot.SpringApplication;
 import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLSocketFactory;
+
 import java.io.*;  
 import java.net.*; 
-import org.apache.http.conn.ssl.SSLSocketFactory;
+
 @ComponentScan(exclude=Book.class,scanBasePackages={"net.javabeat"})
 @SpringBootApplication
 public class ResourceLeak {
 private int x ,y ,z,apiCount;
+private boolean active;
 		
 	 public static void main(String args[]) throws Exception {  
-	     SpringApplication.run(SpringBootApplicationAndComponentScanNotBeUsedInDefaultPackage.class, args);
+	     SpringBootApplication.run(ResourceLeak.class, args);
 	     System.out.println("Hello"); 
 	     StringBuffer sb = new StringBuffer("Hi ");
 	     SSLContext context = SSLContext.getInstance("SSL");
@@ -21,14 +23,15 @@ private int x ,y ,z,apiCount;
 	     String s = "" + 123;
 		 
 		 
-	private int c = 0;
-    	public synchronized void increment() {
-        c++;
-    }
+	
+    	
 	    } 
  
-	private boolean active;
 	
+	 public synchronized void increment() {
+		 int c = 0;
+	        c++;
+	    }
 	 
 	public void setX(int val) {
 		//this is for test
