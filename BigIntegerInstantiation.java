@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.lang.IllegalArgumentException;
 
-class BigIntegerInstantiation throws IllegalArgumentException {
+class BigIntegerInstantiation{
 	private static List<Integer> integers = new ArrayList<Integer>();
 
 	public static void main(String args[]){  
