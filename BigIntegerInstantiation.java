@@ -4,8 +4,11 @@ import javax.net.ssl.SSLContext;
 import java.io.*;  
 import java.net.*;  
 import org.apache.http.conn.ssl.SSLSocketFactory;
+import java.lang.IllegalArgumentException;
+
 class BigIntegerInstantiation throws IllegalArgumentException{
 	public static void main(String args[]){  
+		private static List<Integer> integers = new ArrayList<Integer>();
 		// EMB-ISSUE: CodeIssueNames.BIG_INTEGER_INSTANTIATION
         BigInteger bigInteger = new BigInteger("1");  
      // EMB-ISSUE: CodeIssueNames.BIG_INTEGER_INSTANTIATION
@@ -29,7 +32,7 @@ class BigIntegerInstantiation throws IllegalArgumentException{
 	     SSLContext context = SSLContext.getInstance("TLS");
 	     Socket soc = new Socket("www.google.com",80);
 	     Socket soc1 = SSLSocketFactory.getDefault().createSocket("www.google.com", 443);
-	private static List<Integer> integers = new ArrayList<Integer>();
+	
 public static void addInteger(Integer value) throws IllegalArgumentException {
 		if (integers.contains(value)) {
 			 new IllegalArgumentException("Integer already added.");
