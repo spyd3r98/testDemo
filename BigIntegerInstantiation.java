@@ -62,7 +62,7 @@ class BigIntegerInstantiation{
 	    
 public static void addInteger(Integer value){
 		if (integers.contains(value)) {
-			 throw new IllegalArgumentException("Integer already added.");
+			 new IllegalArgumentException("Integer already added.");
 		}
 		integers.add(value);
 	}
