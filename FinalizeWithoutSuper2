@@ -1,0 +1,8 @@
+public class FinalizeWithoutSuper1 
+    { 
+		// EMB-ISSUE: CodeIssueNames.FINALIZE_WITHOUT_SUPER
+        protected void finalize() 
+        {
+            IO.writeLine("finalizing BadClass");
+        }
+    }
