@@ -1,3 +1,4 @@
+import java.lang.*;
 public class FinalizeWithoutSuper1 
     { 
 		@Override
