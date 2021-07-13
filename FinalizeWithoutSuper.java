@@ -26,7 +26,7 @@ public class FinalizeWithoutSuper {
     {
   
         // Creating demo's object
-        demo d = new demo();
+    	FinalizeWithoutSuper d = new FinalizeWithoutSuper();
   
         // Calling finalize of demo
         d.finalize();

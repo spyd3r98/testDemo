@@ -27,15 +27,10 @@ import java.util.List;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManagerFactory;
 
-import org.graalvm.compiler.core.GraalCompiler.Request;
-
-import okio.Buffer;
-import okio.ByteString;
-
-public final class SslContextBuilder {
+public final class ssl {
   private final List<String> certificateBase64s = new ArrayList<String>();
 
-  public SslContextBuilder addCertificate(String certificateBase64) {
+  public ssl addCertificate(String certificateBase64) {
     certificateBase64s.add(certificateBase64);
     return this;
   }
@@ -71,7 +66,7 @@ public final class SslContextBuilder {
 
   public static void main(String[] args) throws Exception {
     if (args.length != 1) {
-      System.out.printf("Usage: %s <hostname>%n", SslContextBuilder.class.getName());
+      System.out.printf("Usage: %s <hostname>%n", ssl.class.getName());
       System.exit(1);
     }
 

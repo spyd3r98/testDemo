@@ -1,4 +1,4 @@
-public class FinalizeWithoutSuper1 
+public class FinalizeWithoutSuper2
     { 
 		@Override
     protected void finalize() throws Throwable
