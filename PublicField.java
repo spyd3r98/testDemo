@@ -1,6 +1,6 @@
 public class PublicField {
     
-    public static final String[] a = {"green","yellow","red","orange","purple"};
+    public static final int[] abc = {1,2,3,4,5};
 
 
 }
